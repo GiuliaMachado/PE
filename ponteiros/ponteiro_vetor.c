@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //alocacao dinamica
 
 int main(){
     double media, *notas; 
@@ -7,6 +7,8 @@ int main(){
     printf("Digite o numero de elementos do vetor");
     scanf("%d", &n);
     notas = malloc(n * sizeof(double));
+    //sempre verificar se malloc retorna NULL
+    //segurança para nao estourar a memoria
     if(notas == NULL){
         printf("Nao ha memoria suficiente");
         exit(1);
@@ -20,6 +22,8 @@ int main(){
     }
 
     printf("Media: %lf", media);
+    //variavel alocada dinamicamente continua existindo
+    //tem que desalocar com a função free(vetor)
     free(notas);
 
     return 0;
