@@ -8,7 +8,7 @@ void entrada_conteudo_endereco(char *c, int n){
         printf("entrada: %d, ", i);
         printf("conteudo: %c ", c[i]);
         //imprimir ponteiro em decimal %llu
-        printf("endereco: %llu ", &c[i]);
+        printf("endereco: %p ", &c[i]);
         printf("\n");
         //quando der enter cancela o loop, se a entrada for maior que conteudo
         if(c[i] == '\n'){

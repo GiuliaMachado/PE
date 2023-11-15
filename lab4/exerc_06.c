@@ -25,7 +25,7 @@ void le_vetor(int *v, int n){
     }
 }
 
-int imprime_vetor(int *v, int n) {
+void imprime_vetor(int *v, int n) {
     for (int i = 0; i < n; i++) {
         printf("%d ", v[i]);
     }

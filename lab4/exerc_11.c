@@ -19,7 +19,7 @@ VectorInt vectorint(void) {
     }
     v->data = (int*)malloc(sizeof(int));
     if (v->data == NULL) {
-        printf1("Não foi possivel alocar memória");
+        printf("Não foi possivel alocar memória");
         exit(1);
     }
     v->capacity = 1;

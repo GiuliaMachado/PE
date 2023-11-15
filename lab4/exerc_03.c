@@ -7,7 +7,7 @@ void entrada_conteudo_endereco(int *v, int n){
     for(int i = 0; i<n; i++){
         printf("entrada: %d, ", i);
         printf("conteudo: %d, ", v[i]);
-        printf("endereco: %llu, ", &v[i]);
+        printf("endereco: %p, ", &v[i]);
         printf("\n");
     }
 }

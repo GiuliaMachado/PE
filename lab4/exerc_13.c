@@ -2,6 +2,7 @@
 //11202130151
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 typedef struct _aluno {
     int ra;
@@ -31,7 +32,7 @@ int main() {
     scanf("%d", &(aluno1->ra));
     getchar();
     printf("Digite o nome do aluno 1: ");
-    fgets(&(aluno1->nome), 1000, stdin);
+    fgets(aluno1->nome, sizeof(aluno1->nome), stdin);
     printf("Digite o Sexo do aluno 1 (M/F): ");
     scanf("%c", &(aluno1->sexo));
     printf("Digite a idade do aluno 1: ");
@@ -42,7 +43,7 @@ int main() {
     scanf("%d", &(aluno2->ra));
     getchar();
     printf("Digite o nome do aluno 2: ");
-    fgets(&(aluno2->nome), 1000, stdin);
+    fgets(aluno2->nome, sizeof(aluno2), stdin);
     printf("Digite o Sexo do aluno 2 (M/F): ");
     scanf("%c", &(aluno2->sexo));
     printf("Digite a idade do aluno 2: ");
