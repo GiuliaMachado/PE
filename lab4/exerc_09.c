@@ -25,7 +25,11 @@ int main(){
     printf("Digite o tamanho da string: ");
     scanf("%d", &n);
     getchar();
-
+    c =(char *)malloc(n * sizeof(char));
+    if(c == NULL){
+        printf("Nao foi possivel alocar");
+        exit(1);
+    }
     printf("Digite sua string: ");
     fgets(c, n+1, stdin);
 
@@ -35,6 +39,8 @@ int main(){
         printf("string reversa: %s\n", reverso);
     }
 
+    free(c);
+    free(reverso);
 
 
     return 0;

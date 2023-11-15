@@ -25,6 +25,10 @@ int main(){
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &n1);
     v1 = (int *) malloc(n1 * sizeof(int));
+    if(v1 == NULL){
+        printf("Nao foi possivel alocar memoria.");
+        exit(1);
+    }
     printf("Digite os elementos do primeiro vetor: ");
     for(int i = 0; i < n1; i++){
         scanf("%d", &v1[i]);
@@ -33,6 +37,10 @@ int main(){
     printf("Digite o tamanho do segundo vetor: ");
     scanf("%d", &n2);
     v2 = (int *) malloc(n2 * sizeof(int));
+    if(v2 == NULL){
+        printf("Nao foi possivel alocar memoria.");
+        exit(1);
+    }
     printf("Digite os elementos do primeiro vetor: ");
     for(int i = 0; i < n2; i++){
         scanf("%d", &v2[i]);

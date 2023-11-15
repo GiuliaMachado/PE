@@ -59,5 +59,8 @@ int main(){
     printf("Vetor b trocado com valor de a: ");
     imprime_vetor(b, n);
 
+    free(a);
+    free(b);
+
     return 0;
 }
